@@ -432,15 +432,17 @@ if(weekNumberArray>0) {
     let closest = weekNumberArray.reduce(function (prev, curr) {
         return (Math.abs(curr - actualWeekNumber) < Math.abs(prev - actualWeekNumber) ? curr : prev);
     })
-}
 
-if(planObject) {
-    for (let i = 0; i < planObject.length; i++) {
-        if (parseFloat(planObject[i].weekNumber) === closest) {
-            actualPlanNumber = planObject[i];
+    if(planObject) {
+        for (let i = 0; i < planObject.length; i++) {
+            if (parseFloat(planObject[i].weekNumber) === closest) {
+                actualPlanNumber = planObject[i];
+            }
         }
     }
 }
+
+
 
 
 if(actualPlanNumber) {
